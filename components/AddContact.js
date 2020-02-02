@@ -37,8 +37,8 @@ export default class AddContact extends React.Component {
     getHandler = key => val => this.setState({[key]: val})
 
     hanldePhoneChange = this.getHandler('phone')
+    
     validateForm = () => {
-        console.log(this.state);
         let valid = false
         if(+this.state.phone >= 0 && this.state.phone.length === 10 && this.state.name.length >= 3) {
             valid = true;
